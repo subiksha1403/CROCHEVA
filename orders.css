@@ -1,0 +1,876 @@
+/* ================================
+   BASIC RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5eadc;
+    color: #4b2e20;
+    min-height: 100vh;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.header {
+    width: 100%;
+    background-color: #4b2e20;
+
+    padding: 18px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.brand-name a {
+    text-decoration: none;
+    color: #f5eadc;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.navbar a {
+    color: #f5eadc;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #d9b994;
+}
+
+
+/* ================================
+   PAGE
+================================ */
+
+.orders-page {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+
+/* ================================
+   PAGE HEADING
+================================ */
+
+.page-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.small-title {
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    color: #8a6249;
+
+    margin-bottom: 10px;
+}
+
+.page-heading h1 {
+    font-size: 40px;
+    color: #4b2e20;
+
+    margin-bottom: 10px;
+}
+
+.page-heading p:last-child {
+    color: #795b48;
+    line-height: 1.6;
+}
+
+
+/* ================================
+   ORDER CARD
+================================ */
+
+.order-card {
+    background-color: #fffaf4;
+
+    border: 1px solid #ddc4aa;
+    border-radius: 18px;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 10px 30px rgba(75, 46, 32, 0.10);
+}
+
+
+/* ================================
+   ORDER HEADER
+================================ */
+
+.order-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #dfcbb7;
+}
+
+.order-id h3 {
+    font-size: 18px;
+    color: #4b2e20;
+
+    margin-bottom: 6px;
+}
+
+.order-date {
+    font-size: 13px;
+    color: #795b48;
+}
+
+
+/* ================================
+   STATUS
+================================ */
+
+.order-status {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 15px;
+
+    border-radius: 20px;
+
+    background-color: #ead8c1;
+    color: #4b2e20;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* ================================
+   CUSTOMER INFO
+================================ */
+
+.customer-info {
+    background-color: #f8efe5;
+
+    border-radius: 12px;
+
+    padding: 18px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.customer-info h3 {
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.customer-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px 25px;
+}
+
+.customer-detail {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.customer-detail span {
+    color: #795b48;
+}
+
+.customer-detail strong {
+    color: #4b2e20;
+}
+
+.full-address {
+    grid-column: 1 / -1;
+}
+
+
+/* ================================
+   PRODUCTS
+================================ */
+
+.order-products {
+    margin-top: 20px;
+}
+
+.order-products h3 {
+    font-size: 19px;
+    margin-bottom: 15px;
+}
+
+.product-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #e3d0bd;
+}
+
+.product-item:last-child {
+    border-bottom: none;
+}
+
+.product-image {
+    width: 85px;
+    height: 85px;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    background-color: #dfc4a7;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.product-info {
+    flex: 1;
+}
+
+.product-info h4 {
+    font-size: 17px;
+
+    color: #4b2e20;
+
+    margin-bottom: 6px;
+}
+
+.product-category {
+    font-size: 13px;
+    color: #8a6249;
+
+    margin-bottom: 5px;
+}
+
+.product-quantity {
+    font-size: 14px;
+    color: #795b48;
+}
+
+.product-total {
+    font-size: 17px;
+
+    font-weight: bold;
+
+    color: #4b2e20;
+
+    white-space: nowrap;
+}
+
+
+/* ================================
+   BILL
+================================ */
+
+.order-bottom {
+    display: grid;
+
+    grid-template-columns: 1fr 300px;
+
+    gap: 30px;
+
+    margin-top: 20px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #dfcbb7;
+}
+
+.payment-box h3,
+.bill-box h3 {
+    font-size: 17px;
+
+    margin-bottom: 12px;
+}
+
+.payment-method {
+    display: inline-block;
+
+    background-color: #ead8c1;
+
+    padding: 8px 15px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.bill-box {
+    background-color: #f8efe5;
+
+    border-radius: 12px;
+
+    padding: 18px;
+}
+
+.bill-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 8px 0;
+
+    color: #795b48;
+
+    font-size: 14px;
+}
+
+.discount-text {
+    color: #6b4632;
+}
+
+.bill-divider {
+    height: 1px;
+
+    background-color: #d8c1aa;
+
+    margin: 8px 0;
+}
+
+.total-row {
+    font-size: 19px;
+
+    color: #4b2e20;
+}
+
+
+/* ================================
+   ORDER ACTIONS
+================================ */
+
+.order-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    margin-top: 20px;
+}
+
+.view-products-btn,
+.cancel-order-btn {
+    min-height: 42px;
+
+    padding: 0 18px;
+
+    border-radius: 9px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.view-products-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    background-color: #ead8c1;
+
+    color: #4b2e20;
+
+    border: 1px solid #cbaa88;
+}
+
+.view-products-btn:hover {
+    background-color: #dfc4a7;
+}
+
+.cancel-order-btn {
+    background-color: #4b2e20;
+
+    color: #f5eadc;
+
+    border: none;
+}
+
+.cancel-order-btn:hover {
+    background-color: #6b4632;
+}
+
+
+/* ================================
+   CANCELLED STATUS
+================================ */
+
+.status-cancelled {
+    background-color: #d8c1aa;
+}
+
+
+/* ================================
+   NO ORDERS
+================================ */
+
+.no-orders {
+    display: none;
+
+    background-color: #fffaf4;
+
+    border: 1px solid #ddc4aa;
+
+    border-radius: 20px;
+
+    padding: 55px 25px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(75, 46, 32, 0.10);
+}
+
+.empty-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background-color: #ead8c1;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+}
+
+.no-orders h2 {
+    font-size: 27px;
+
+    margin-bottom: 10px;
+}
+
+.no-orders p {
+    color: #795b48;
+
+    max-width: 500px;
+
+    margin: 0 auto 25px;
+
+    line-height: 1.6;
+}
+
+.shop-now-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 46px;
+
+    padding: 0 25px;
+
+    border-radius: 9px;
+
+    background-color: #4b2e20;
+
+    color: #f5eadc;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.shop-now-btn:hover {
+    background-color: #6b4632;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   CANCEL MODAL
+================================ */
+
+.modal-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background-color: rgba(50, 30, 20, 0.55);
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 1000;
+}
+
+.cancel-modal {
+    position: relative;
+
+    width: 100%;
+    max-width: 420px;
+
+    background-color: #fffaf4;
+
+    border-radius: 18px;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+
+    animation: modalOpen 0.2s ease;
+}
+
+@keyframes modalOpen {
+
+    from {
+        transform: scale(0.92);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.close-modal {
+    position: absolute;
+
+    top: 12px;
+    right: 15px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #4b2e20;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+.modal-icon {
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 18px;
+
+    border-radius: 50%;
+
+    background-color: #ead8c1;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+
+    font-weight: bold;
+}
+
+.cancel-modal h2 {
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+.cancel-modal p {
+    color: #795b48;
+
+    line-height: 1.5;
+
+    margin-bottom: 25px;
+}
+
+.modal-buttons {
+    display: flex;
+
+    gap: 12px;
+
+    justify-content: center;
+}
+
+.keep-order-btn,
+.confirm-cancel-btn {
+    min-height: 44px;
+
+    padding: 0 18px;
+
+    border-radius: 9px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.keep-order-btn {
+    background-color: #ead8c1;
+
+    color: #4b2e20;
+
+    border: 1px solid #cbaa88;
+}
+
+.confirm-cancel-btn {
+    background-color: #4b2e20;
+
+    color: #f5eadc;
+
+    border: none;
+}
+
+
+/* ================================
+   TOAST
+================================ */
+
+.toast {
+    position: fixed;
+
+    left: 50%;
+
+    bottom: 30px;
+
+    transform: translate(-50%, 100px);
+
+    background-color: #4b2e20;
+
+    color: #f5eadc;
+
+    padding: 13px 22px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: 0.3s;
+
+    z-index: 2000;
+}
+
+.toast.show {
+    transform: translate(-50%, 0);
+
+    opacity: 1;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+.footer {
+    text-align: center;
+
+    padding: 25px 20px;
+
+    background-color: #4b2e20;
+
+    color: #f5eadc;
+
+    margin-top: 50px;
+}
+
+.footer p {
+    font-size: 14px;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 800px) {
+
+    .header {
+        flex-direction: column;
+
+        padding: 18px 5%;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    .orders-page {
+        margin: 35px auto;
+    }
+
+    .page-heading h1 {
+        font-size: 34px;
+    }
+
+    .order-bottom {
+        grid-template-columns: 1fr;
+    }
+
+    .bill-box {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .order-card {
+        padding: 18px;
+    }
+
+    .order-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .customer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-address {
+        grid-column: auto;
+    }
+
+    .product-item {
+        align-items: flex-start;
+    }
+
+    .product-image {
+        width: 70px;
+        height: 70px;
+    }
+
+    .product-info h4 {
+        font-size: 15px;
+    }
+
+    .product-total {
+        font-size: 15px;
+    }
+
+    .order-actions {
+        flex-direction: column;
+    }
+
+    .view-products-btn,
+    .cancel-order-btn {
+        width: 100%;
+    }
+
+    .modal-buttons {
+        flex-direction: column;
+    }
+
+    .keep-order-btn,
+    .confirm-cancel-btn {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .brand-name a {
+        font-size: 24px;
+    }
+
+    .navbar a {
+        font-size: 13px;
+    }
+
+    .page-heading h1 {
+        font-size: 29px;
+    }
+
+    .order-card {
+        padding: 15px;
+    }
+
+    .product-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .product-item {
+        gap: 12px;
+    }
+}

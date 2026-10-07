@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile | CROCHEVA</title>
+
+    <link rel="stylesheet" href="profile.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="brand-name">
+            <a href="index.html">CROCHEVA</a>
+        </div>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="categories.html">Categories</a>
+            <a href="products.html">Products</a>
+            <a href="cart.html">Cart</a>
+            <a href="orders.html">My Orders</a>
+            <a href="profile.html" class="active">Profile</a>
+        </nav>
+
+    </header>
+
+
+    <!-- PROFILE PAGE -->
+    <main class="profile-page">
+
+        <!-- PAGE HEADING -->
+        <section class="page-heading">
+
+            <p class="small-title">WELCOME TO CROCHEVA</p>
+
+            <h1>My Profile</h1>
+
+            <p>
+                Manage your account and view your customer details.
+            </p>
+
+        </section>
+
+
+        <!-- PROFILE CARD -->
+        <section class="profile-card" id="profileCard">
+
+            <!-- PROFILE TOP -->
+            <div class="profile-top">
+
+                <div class="profile-avatar" id="profileAvatar">
+                    C
+                </div>
+
+                <div class="profile-title">
+
+                    <h2 id="displayName">
+                        Customer
+                    </h2>
+
+                    <p id="displayEmail">
+                        customer@email.com
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CUSTOMER DETAILS -->
+            <div class="details-section">
+
+                <h3>Personal Information</h3>
+
+                <div class="details-grid">
+
+                    <div class="detail-box">
+
+                        <span>Full Name</span>
+
+                        <strong id="name">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-box">
+
+                        <span>Phone Number</span>
+
+                        <strong id="phone">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-box">
+
+                        <span>Email Address</span>
+
+                        <strong id="email">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-box">
+
+                        <span>Date of Birth</span>
+
+                        <strong id="dob">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-box address-box">
+
+                        <span>Address</span>
+
+                        <strong id="address">
+                            —
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACCOUNT ACTIONS -->
+            <div class="profile-actions">
+
+                <a href="orders.html" class="primary-btn">
+                    My Orders
+                </a>
+
+                <button
+                    type="button"
+                    class="secondary-btn"
+                    id="editProfileBtn"
+                >
+                    Edit Profile
+                </button>
+
+                <button
+                    type="button"
+                    class="logout-btn"
+                    id="logoutBtn"
+                >
+                    Logout
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- NO CUSTOMER -->
+        <section class="no-profile" id="noProfile">
+
+            <div class="empty-icon">
+                👤
+            </div>
+
+            <h2>You're Not Logged In</h2>
+
+            <p>
+                Please login or create an account to view your profile.
+            </p>
+
+            <div class="login-actions">
+
+                <a href="login.html" class="primary-btn">
+                    Login
+                </a>
+
+                <a href="register.html" class="secondary-btn">
+                    Create Account
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- EDIT PROFILE MODAL -->
+    <div class="modal-overlay" id="editModal">
+
+        <div class="edit-modal">
+
+            <button
+                type="button"
+                class="close-modal"
+                id="closeModal"
+            >
+                ×
+            </button>
+
+            <h2>Edit Profile</h2>
+
+            <p class="modal-subtitle">
+                Update your customer information.
+            </p>
+
+
+            <form id="editForm">
+
+                <div class="input-group">
+
+                    <label for="editName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editName"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="editPhone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="editPhone"
+                        maxlength="10"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="editEmail">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="editEmail"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="editDob">
+                        Date of Birth
+                    </label>
+
+                    <input
+                        type="date"
+                        id="editDob"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="editAddress">
+                        Address
+                    </label>
+
+                    <textarea
+                        id="editAddress"
+                        rows="3"
+                        placeholder="Enter your address"
+                    ></textarea>
+
+                </div>
+
+
+                <div class="modal-actions">
+
+                    <button
+                        type="button"
+                        class="cancel-btn"
+                        id="cancelEditBtn"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="save-btn"
+                    >
+                        Save Changes
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- LOGOUT MODAL -->
+    <div class="modal-overlay" id="logoutModal">
+
+        <div class="logout-modal">
+
+            <div class="modal-icon">
+                ?
+            </div>
+
+            <h2>Logout?</h2>
+
+            <p>
+                Are you sure you want to logout from CROCHEVA?
+            </p>
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="cancel-btn"
+                    id="cancelLogoutBtn"
+                >
+                    Stay
+                </button>
+
+                <button
+                    type="button"
+                    class="save-btn"
+                    id="confirmLogoutBtn"
+                >
+                    Logout
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- TOAST -->
+    <div class="toast" id="toast"></div>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <p>
+            © <span id="currentYear"></span> CROCHEVA.
+            Handmade with care.
+        </p>
+
+    </footer>
+
+
+    <script src="profile.js"></script>
+
+</body>
+</html>

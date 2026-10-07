@@ -1,0 +1,744 @@
+/* ================================
+   BASIC RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5eadc;
+    color: #4b2e20;
+    min-height: 100vh;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.header {
+    width: 100%;
+    background-color: #4b2e20;
+
+    padding: 18px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.brand-name a {
+    text-decoration: none;
+    color: #f5eadc;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.navbar a {
+    color: #f5eadc;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #d9b994;
+}
+
+
+/* ================================
+   PAGE
+================================ */
+
+.profile-page {
+    width: 100%;
+    max-width: 950px;
+
+    margin: 50px auto;
+
+    padding: 0 20px;
+}
+
+
+/* ================================
+   HEADING
+================================ */
+
+.page-heading {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.small-title {
+    color: #8a6249;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.page-heading h1 {
+    font-size: 40px;
+
+    margin-bottom: 10px;
+}
+
+.page-heading p:last-child {
+    color: #795b48;
+
+    line-height: 1.6;
+}
+
+
+/* ================================
+   PROFILE CARD
+================================ */
+
+.profile-card {
+    background-color: #fffaf4;
+
+    border: 1px solid #ddc4aa;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    box-shadow: 0 12px 35px rgba(75, 46, 32, 0.12);
+}
+
+
+/* ================================
+   PROFILE TOP
+================================ */
+
+.profile-top {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid #dfcbb7;
+}
+
+.profile-avatar {
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    background-color: #4b2e20;
+
+    color: #f5eadc;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.profile-title h2 {
+    font-size: 28px;
+
+    margin-bottom: 7px;
+}
+
+.profile-title p {
+    color: #795b48;
+}
+
+
+/* ================================
+   DETAILS
+================================ */
+
+.details-section {
+    padding-top: 30px;
+}
+
+.details-section h3 {
+    font-size: 21px;
+
+    margin-bottom: 20px;
+}
+
+.details-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+}
+
+.detail-box {
+    background-color: #f8efe5;
+
+    border: 1px solid #e2cdb7;
+
+    border-radius: 12px;
+
+    padding: 18px;
+}
+
+.detail-box span {
+    display: block;
+
+    color: #8a6249;
+
+    font-size: 13px;
+
+    margin-bottom: 7px;
+}
+
+.detail-box strong {
+    display: block;
+
+    color: #4b2e20;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+
+    word-break: break-word;
+}
+
+.address-box {
+    grid-column: 1 / -1;
+}
+
+
+/* ================================
+   ACTIONS
+================================ */
+
+.profile-actions {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 30px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #dfcbb7;
+}
+
+.primary-btn,
+.secondary-btn,
+.logout-btn {
+    min-height: 45px;
+
+    padding: 0 22px;
+
+    border-radius: 9px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background-color: #4b2e20;
+
+    color: #f5eadc;
+
+    border: none;
+}
+
+.primary-btn:hover {
+    background-color: #6b4632;
+
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background-color: #ead8c1;
+
+    color: #4b2e20;
+
+    border: 1px solid #cbaa88;
+}
+
+.secondary-btn:hover {
+    background-color: #dfc4a7;
+}
+
+.logout-btn {
+    background-color: transparent;
+
+    color: #4b2e20;
+
+    border: 1px solid #8a6249;
+}
+
+.logout-btn:hover {
+    background-color: #ead8c1;
+}
+
+
+/* ================================
+   NO PROFILE
+================================ */
+
+.no-profile {
+    display: none;
+
+    background-color: #fffaf4;
+
+    border: 1px solid #ddc4aa;
+
+    border-radius: 20px;
+
+    padding: 55px 25px;
+
+    text-align: center;
+
+    box-shadow: 0 12px 35px rgba(75, 46, 32, 0.12);
+}
+
+.empty-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background-color: #ead8c1;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+}
+
+.no-profile h2 {
+    margin-bottom: 10px;
+}
+
+.no-profile p {
+    color: #795b48;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+.login-actions {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+}
+
+
+/* ================================
+   MODAL
+================================ */
+
+.modal-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background-color: rgba(50, 30, 20, 0.55);
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 1000;
+}
+
+.edit-modal,
+.logout-modal {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 480px;
+
+    background-color: #fffaf4;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.close-modal {
+    position: absolute;
+
+    top: 10px;
+    right: 15px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #4b2e20;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+.edit-modal h2,
+.logout-modal h2 {
+    font-size: 25px;
+
+    margin-bottom: 7px;
+}
+
+.modal-subtitle {
+    color: #795b48;
+
+    font-size: 14px;
+
+    margin-bottom: 22px;
+}
+
+
+/* ================================
+   FORM
+================================ */
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 7px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+
+    border: 1px solid #cbaa88;
+
+    border-radius: 8px;
+
+    padding: 12px;
+
+    background-color: #fdf7f0;
+
+    color: #4b2e20;
+
+    font-family: inherit;
+
+    outline: none;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #6b4632;
+
+    box-shadow: 0 0 0 2px #ead8c1;
+}
+
+.input-group textarea {
+    resize: vertical;
+}
+
+
+/* ================================
+   MODAL BUTTONS
+================================ */
+
+.modal-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 22px;
+}
+
+.cancel-btn,
+.save-btn {
+    min-height: 43px;
+
+    padding: 0 18px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background-color: #ead8c1;
+
+    color: #4b2e20;
+
+    border: 1px solid #cbaa88;
+}
+
+.save-btn {
+    background-color: #4b2e20;
+
+    color: #f5eadc;
+
+    border: none;
+}
+
+
+/* ================================
+   LOGOUT MODAL
+================================ */
+
+.logout-modal {
+    text-align: center;
+
+    max-width: 400px;
+}
+
+.modal-icon {
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 18px;
+
+    border-radius: 50%;
+
+    background-color: #ead8c1;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+
+    font-weight: bold;
+}
+
+.logout-modal p {
+    color: #795b48;
+
+    line-height: 1.5;
+}
+
+.logout-modal .modal-actions {
+    justify-content: center;
+}
+
+
+/* ================================
+   TOAST
+================================ */
+
+.toast {
+    position: fixed;
+
+    left: 50%;
+    bottom: 30px;
+
+    transform: translate(-50%, 100px);
+
+    background-color: #4b2e20;
+
+    color: #f5eadc;
+
+    padding: 13px 22px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: 0.3s;
+
+    z-index: 2000;
+}
+
+.toast.show {
+    transform: translate(-50%, 0);
+
+    opacity: 1;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+.footer {
+    text-align: center;
+
+    padding: 25px 20px;
+
+    background-color: #4b2e20;
+
+    color: #f5eadc;
+
+    margin-top: 50px;
+}
+
+.footer p {
+    font-size: 14px;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 800px) {
+
+    .header {
+        flex-direction: column;
+
+        padding: 18px 5%;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    .profile-page {
+        margin: 35px auto;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .profile-card {
+        padding: 22px 18px;
+    }
+
+    .page-heading h1 {
+        font-size: 32px;
+    }
+
+    .profile-top {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .address-box {
+        grid-column: auto;
+    }
+
+    .profile-actions {
+        flex-direction: column;
+    }
+
+    .primary-btn,
+    .secondary-btn,
+    .logout-btn {
+        width: 100%;
+    }
+
+    .login-actions {
+        flex-direction: column;
+    }
+
+    .edit-modal,
+    .logout-modal {
+        padding: 25px 18px;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .brand-name a {
+        font-size: 24px;
+    }
+
+    .navbar a {
+        font-size: 13px;
+    }
+
+    .profile-avatar {
+        width: 75px;
+        height: 75px;
+
+        font-size: 30px;
+    }
+
+    .profile-title h2 {
+        font-size: 23px;
+    }
+
+    .modal-actions {
+        flex-direction: column;
+    }
+
+    .cancel-btn,
+    .save-btn {
+        width: 100%;
+    }
+}

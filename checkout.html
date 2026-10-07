@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | CROCHEVA</title>
+
+    <link rel="stylesheet" href="checkout.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="brand-name">
+            <a href="index.html">CROCHEVA</a>
+        </div>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="categories.html">Categories</a>
+            <a href="products.html">Products</a>
+            <a href="cart.html">Cart</a>
+            <a href="login.html">Login</a>
+        </nav>
+
+    </header>
+
+
+    <!-- PAGE HEADING -->
+    <section class="page-heading">
+
+        <p class="small-title">ALMOST YOURS</p>
+
+        <h1>Checkout</h1>
+
+        <p>Enter your details and complete your order.</p>
+
+    </section>
+
+
+    <!-- CHECKOUT -->
+    <main class="checkout-section">
+
+        <div class="checkout-layout">
+
+
+            <!-- LEFT SIDE -->
+            <div class="checkout-left">
+
+
+                <!-- CUSTOMER DETAILS -->
+                <section class="checkout-card">
+
+                    <div class="section-title">
+
+                        <span class="number">01</span>
+
+                        <div>
+                            <h2>Customer Details</h2>
+                            <p>Your delivery information</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+
+                        <!-- NAME -->
+                        <div class="form-group">
+
+                            <label for="fullName">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="fullName"
+                                placeholder="Enter your full name"
+                            >
+
+                        </div>
+
+
+                        <!-- PHONE -->
+                        <div class="form-group">
+
+                            <label for="phone">
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                placeholder="Enter 10 digit phone number"
+                                maxlength="10"
+                            >
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+                        <div class="form-group full-width">
+
+                            <label for="email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Enter your email"
+                            >
+
+                        </div>
+
+
+                        <!-- ADDRESS -->
+                        <div class="form-group full-width">
+
+                            <label for="address">
+                                Delivery Address
+                            </label>
+
+                            <textarea
+                                id="address"
+                                rows="4"
+                                placeholder="House / Door No, Street, Area, City, Pincode"
+                            ></textarea>
+
+                        </div>
+
+
+                        <!-- FROM -->
+                        <div class="form-group">
+
+                            <label for="fromAddress">
+                                FROM
+                            </label>
+
+                            <input
+                                type="text"
+                                id="fromAddress"
+                                value="CROCHEVA"
+                                readonly
+                            >
+
+                        </div>
+
+
+                        <!-- TO -->
+                        <div class="form-group">
+
+                            <label for="toAddress">
+                                TO
+                            </label>
+
+                            <textarea
+                                id="toAddress"
+                                rows="3"
+                                placeholder="Enter delivery address"
+                            ></textarea>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+                <!-- PAYMENT -->
+                <section class="checkout-card">
+
+                    <div class="section-title">
+
+                        <span class="number">02</span>
+
+                        <div>
+                            <h2>Payment Method</h2>
+                            <p>Choose your preferred payment option</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="payment-options">
+
+
+                        <!-- COD -->
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                id="cod"
+                                name="payment"
+                                value="COD"
+                                checked
+                            >
+
+                            <div class="payment-content">
+
+                                <div class="payment-icon">
+                                    COD
+                                </div>
+
+                                <div>
+
+                                    <h3>
+                                        Cash on Delivery
+                                    </h3>
+
+                                    <p>
+                                        Pay when your order is delivered.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </label>
+
+
+                        <!-- UPI -->
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                id="upi"
+                                name="payment"
+                                value="UPI"
+                            >
+
+                            <div class="payment-content">
+
+                                <div class="payment-icon">
+                                    UPI
+                                </div>
+
+                                <div>
+
+                                    <h3>
+                                        UPI Payment
+                                    </h3>
+
+                                    <p>
+                                        Scan the QR code and pay using UPI.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </label>
+
+
+                    </div>
+
+
+                    <!-- UPI QR -->
+                    <div
+                        id="upiSection"
+                        class="upi-section"
+                        style="display: none;"
+                    >
+
+                        <h3>Scan & Pay</h3>
+
+                        <p>
+                            Scan this QR code using your UPI app.
+                        </p>
+
+                        <div class="qr-box">
+
+                            <img
+                                id="qrCode"
+                                src=""
+                                alt="UPI QR Code"
+                            >
+
+                        </div>
+
+                        <p class="upi-note">
+                            UPI ID: crocheva@upi
+                        </p>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+            <aside class="order-summary">
+
+                <h2>
+                    Order Summary
+                </h2>
+
+
+                <!-- PRODUCTS -->
+                <div id="checkoutItems">
+
+                    <!-- Products will appear here -->
+
+                </div>
+
+
+                <!-- SUBTOTAL -->
+                <div class="summary-line">
+
+                    <span>
+                        Subtotal
+                    </span>
+
+                    <strong id="subtotal">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <!-- DISCOUNT -->
+                <div class="summary-line discount-line">
+
+                    <span>
+                        Discount
+                    </span>
+
+                    <strong id="discount">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <!-- DELIVERY -->
+                <div class="summary-line">
+
+                    <span>
+                        Delivery
+                    </span>
+
+                    <strong>
+                        FREE
+                    </strong>
+
+                </div>
+
+
+                <!-- TOTAL -->
+                <div class="summary-total">
+
+                    <span>
+                        Estimated Total
+                    </span>
+
+                    <strong id="total">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <!-- PLACE ORDER -->
+                <button
+                    type="button"
+                    id="placeOrderBtn"
+                    class="place-order-btn"
+                >
+                    PLACE ORDER
+                </button>
+
+
+                <a
+                    href="cart.html"
+                    class="back-cart"
+                >
+                    ← Back to Cart
+                </a>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <!-- TOAST -->
+    <div id="toast"></div>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-content">
+
+
+            <div>
+
+                <h3>
+                    CROCHEVA
+                </h3>
+
+                <p>
+                    Handmade crochet creations made with care.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    Quick Links
+                </h4>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="categories.html">
+                    Categories
+                </a>
+
+                <a href="products.html">
+                    Products
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    Customer
+                </h4>
+
+                <a href="cart.html">
+                    Cart
+                </a>
+
+                <a href="orders.html">
+                    My Orders
+                </a>
+
+                <a href="profile.html">
+                    Profile
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                ©
+                <span id="currentYear"></span>
+                CROCHEVA.
+                All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="checkout.js"></script>
+
+</body>
+
+</html>

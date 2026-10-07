@@ -1,0 +1,484 @@
+/* ================================
+   CROCHEVA REGISTER PAGE
+   Brown + Beige Theme
+================================ */
+
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: #f5eadc;
+
+    color: #4b2e20;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.header {
+    width: 100%;
+
+    padding: 20px 7%;
+
+    background-color: #4b2e20;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.brand-name a {
+    text-decoration: none;
+
+    color: #f5eadc;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.navbar {
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+
+.navbar a {
+    text-decoration: none;
+
+    color: #f5eadc;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.navbar a:hover,
+.navbar a.active {
+    color: #d8b58b;
+}
+
+
+/* ================================
+   REGISTER PAGE
+================================ */
+
+.register-page {
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 60px 20px;
+}
+
+
+/* ================================
+   REGISTER CARD
+================================ */
+
+.register-card {
+    width: 100%;
+
+    max-width: 520px;
+
+    background-color: #fffaf3;
+
+    padding: 45px;
+
+    border-radius: 20px;
+
+    border: 1px solid #e2cdb5;
+
+    box-shadow:
+        0 15px 40px rgba(75, 46, 32, 0.15);
+}
+
+
+/* ================================
+   HEADING
+================================ */
+
+.register-heading {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.small-title {
+    color: #a36f45;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+
+.register-heading h1 {
+    color: #4b2e20;
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+
+.register-heading p:last-child {
+    color: #7b6253;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* ================================
+   MESSAGE
+================================ */
+
+.message {
+    display: none;
+
+    padding: 12px 15px;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+
+    font-size: 14px;
+
+    text-align: center;
+}
+
+
+.message.success {
+    display: block;
+
+    background-color: #e7f2e5;
+
+    color: #386334;
+
+    border: 1px solid #b9d7b4;
+}
+
+
+.message.error {
+    display: block;
+
+    background-color: #f8e4df;
+
+    color: #8a3d30;
+
+    border: 1px solid #e3b8ae;
+}
+
+
+/* ================================
+   FORM
+================================ */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #4b2e20;
+}
+
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border: 1px solid #d8c0a8;
+
+    border-radius: 10px;
+
+    background-color: #fffdf9;
+
+    color: #4b2e20;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.3s;
+
+    font-family: Arial, sans-serif;
+}
+
+
+.form-group textarea {
+    resize: vertical;
+
+    min-height: 100px;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #9b6743;
+
+    box-shadow:
+        0 0 0 3px rgba(155, 103, 67, 0.12);
+}
+
+
+/* ================================
+   PASSWORD
+================================ */
+
+.password-box {
+    position: relative;
+}
+
+
+.password-box input {
+    padding-right: 70px;
+}
+
+
+.show-password {
+    position: absolute;
+
+    right: 10px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    color: #8b5e3c;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.show-password:hover {
+    color: #4b2e20;
+}
+
+
+/* ================================
+   REGISTER BUTTON
+================================ */
+
+.register-btn {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #4b2e20;
+
+    color: #fffaf3;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    margin-top: 5px;
+}
+
+
+.register-btn:hover {
+    background-color: #6a4330;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(75, 46, 32, 0.2);
+}
+
+
+/* ================================
+   LOGIN TEXT
+================================ */
+
+.login-text {
+    text-align: center;
+
+    margin-top: 25px;
+}
+
+
+.login-text p {
+    color: #7b6253;
+
+    font-size: 14px;
+}
+
+
+.login-text a {
+    color: #8b5e3c;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+.login-text a:hover {
+    text-decoration: underline;
+}
+
+
+/* ================================
+   BACK HOME
+================================ */
+
+.back-home {
+    display: block;
+
+    text-align: center;
+
+    margin-top: 22px;
+
+    color: #6a4330;
+
+    font-size: 14px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+
+.back-home:hover {
+    text-decoration: underline;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+.footer {
+    background-color: #4b2e20;
+
+    color: #f5eadc;
+
+    text-align: center;
+
+    padding: 18px;
+
+    font-size: 13px;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+    .header {
+        padding: 18px 5%;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .navbar {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    .navbar a {
+        font-size: 13px;
+    }
+
+
+    .register-card {
+        padding: 30px 25px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .brand-name a {
+        font-size: 24px;
+    }
+
+
+    .register-heading h1 {
+        font-size: 25px;
+    }
+
+
+    .register-card {
+        padding: 25px 20px;
+    }
+
+}

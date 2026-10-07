@@ -1,0 +1,761 @@
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5eadb;
+    color: #5b3826;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+    width: 100%;
+    min-height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background-color: #f5eadb;
+
+    border-bottom: 1px solid #dfcbb4;
+}
+
+
+/* CROCHEVA TEXT */
+
+.brand-name a {
+    font-family: Georgia, serif;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    color: #7a452d;
+}
+
+
+/* NAVIGATION */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.navbar a {
+    font-size: 15px;
+    font-weight: 600;
+
+    color: #6b4936;
+
+    transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #9b5738;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 600px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    background-color: #ead8c1;
+
+    overflow: hidden;
+}
+
+
+/* LEFT HERO */
+
+.hero-content {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 70px 8%;
+}
+
+
+.small-heading {
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    font-weight: bold;
+
+    color: #9b6347;
+
+    margin-bottom: 20px;
+}
+
+
+.hero-content h1 {
+    font-family: Georgia, serif;
+
+    font-size: 64px;
+
+    line-height: 1.05;
+
+    color: #573523;
+
+    margin-bottom: 25px;
+}
+
+
+.hero-description {
+    max-width: 500px;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: #765542;
+
+    margin-bottom: 35px;
+}
+
+
+/* HERO BUTTONS */
+
+.hero-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+.shop-btn {
+    background-color: #8c4b31;
+
+    color: #fff8ef;
+
+    padding: 15px 30px;
+
+    border-radius: 30px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.shop-btn:hover {
+    background-color: #6f3925;
+
+    transform: translateY(-2px);
+}
+
+
+.explore-btn {
+    color: #67422f;
+
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+.explore-btn:hover {
+    color: #9b5738;
+}
+
+
+/* ================= HERO RIGHT SIDE ================= */
+
+.hero-image-area {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 600px;
+
+    background-color: #dfc4a7;
+}
+
+
+/* ONLY LOGO SPACE */
+
+.logo-circle {
+
+    width: 330px;
+
+    height: 330px;
+
+    border-radius: 50%;
+
+    background-color: #f7eee3;
+
+    border: 4px solid #9b694d;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 35px rgba(91, 56, 38, 0.18);
+}
+
+
+/* LOGO PLACEHOLDER TEXT */
+
+.logo-circle span {
+
+    color: #8c573d;
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    line-height: 1.5;
+}
+
+
+/* ACTUAL LOGO IMAGE */
+
+.logo-circle img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-section {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    padding: 100px 8%;
+
+    background-color: #f7eee3;
+}
+
+
+.section-heading p,
+.section-title p {
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    font-weight: bold;
+
+    color: #a06749;
+
+    margin-bottom: 15px;
+}
+
+
+.section-heading h2,
+.section-title h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    line-height: 1.2;
+
+    color: #603c29;
+}
+
+
+.about-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 20px;
+}
+
+
+.about-content p {
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: #765542;
+}
+
+
+/* ================= SHOP BY COLLECTION ================= */
+
+.categories-section {
+
+    padding: 100px 8%;
+
+    background-color: #ead8c1;
+}
+
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+
+/* CATEGORY GRID */
+
+.category-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 20px;
+}
+
+
+/* CATEGORY CARD */
+
+.category-card {
+
+    min-height: 300px;
+
+    padding: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    background-color: #f8f0e6;
+
+    border: 1px solid #d8bda3;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+
+.category-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 12px 30px rgba(91, 56, 38, 0.15);
+}
+
+
+/* ================= CATEGORY IMAGE SPACE ================= */
+
+.category-image {
+
+    width: 100%;
+
+    height: 190px;
+
+    background-color: #dfc4a7;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 18px;
+}
+
+
+/* ACTUAL CATEGORY IMAGE */
+
+.category-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* CATEGORY NAME */
+
+.category-card h3 {
+
+    font-family: Georgia, serif;
+
+    font-size: 19px;
+
+    color: #613d2a;
+
+    margin-bottom: 12px;
+}
+
+
+/* EXPLORE */
+
+.category-card span {
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    color: #9b5738;
+}
+
+
+/* ================= WHY CROCHEVA ================= */
+
+.why-section {
+
+    padding: 100px 8%;
+
+    background-color: #f7eee3;
+}
+
+
+.features {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.feature-card {
+
+    padding: 35px;
+
+    background-color: #ead8c1;
+
+    border: 1px solid #d7b99c;
+
+    border-radius: 18px;
+}
+
+
+.feature-number {
+
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    color: #a56748;
+
+    margin-bottom: 20px;
+}
+
+
+.feature-card h3 {
+
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+
+    color: #603c29;
+
+    margin-bottom: 15px;
+}
+
+
+.feature-card p {
+
+    color: #765542;
+
+    line-height: 1.7;
+
+    font-size: 15px;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+
+    background-color: #6f452f;
+
+    color: #f8eee2;
+
+    text-align: center;
+
+    padding: 55px 20px 25px;
+}
+
+
+.footer-brand {
+
+    font-family: Georgia, serif;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+
+.footer p {
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+
+    color: #ead8c1;
+}
+
+
+.footer-links {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    margin-bottom: 35px;
+}
+
+
+.footer-links a {
+
+    font-size: 14px;
+
+    color: #f7eee3;
+}
+
+
+.footer-links a:hover {
+
+    color: #e4bd98;
+}
+
+
+.copyright {
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    font-size: 12px;
+
+    color: #dfc4a7;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1000px) {
+
+    .header {
+        padding: 0 5%;
+    }
+
+    .navbar {
+        gap: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .logo-circle {
+        width: 280px;
+        height: 280px;
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 650px) {
+
+    .header {
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+
+    .navbar {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+
+    .hero {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .hero-content {
+
+        padding: 60px 25px;
+
+        text-align: center;
+
+        align-items: center;
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 43px;
+    }
+
+
+    .hero-description {
+
+        font-size: 15px;
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+
+    .hero-image-area {
+
+        min-height: 400px;
+    }
+
+
+    .logo-circle {
+
+        width: 250px;
+
+        height: 250px;
+    }
+
+
+    .about-section {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding: 70px 25px;
+    }
+
+
+    .section-heading h2,
+    .section-title h2 {
+
+        font-size: 34px;
+    }
+
+
+    /* MOBILE CATEGORY */
+
+    .category-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 15px;
+    }
+
+
+    .category-image {
+
+        height: 150px;
+    }
+
+
+    .categories-section,
+    .why-section {
+
+        padding: 70px 20px;
+    }
+
+
+    .features {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .footer-links {
+
+        flex-wrap: wrap;
+
+        gap: 20px;
+    }
+
+}
