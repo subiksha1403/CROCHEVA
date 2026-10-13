@@ -255,12 +255,12 @@ body {
 }
 
 .product-image {
-    width: 85px;
-    height: 85px;
+    width: 65px;
+    height: 65px;
 
     flex-shrink: 0;
 
-    border-radius: 12px;
+    border-radius: 10px;
 
     overflow: hidden;
 
