@@ -11,9 +11,12 @@ app.use(cors());
 // Read JSON data
 app.use(express.json());
 
-// Test route
+// Serve frontend files
+app.use(express.static(__dirname));
+
+// Home page
 app.get("/", (req, res) => {
-    res.send("CROCHEVA Backend is Running!");
+    res.sendFile(__dirname + "/index.html");
 });
 
 // Database test route
