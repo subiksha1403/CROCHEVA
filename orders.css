@@ -874,3 +874,21 @@ body {
         gap: 12px;
     }
 }
+
+/* FIX: My Orders product image size */
+
+.order-product {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.order-product img {
+    width: 65px;
+    height: 65px;
+    min-width: 65px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
