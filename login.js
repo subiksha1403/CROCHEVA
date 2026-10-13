@@ -61,7 +61,7 @@ loginForm.addEventListener("submit", async function (event) {
 
         // Send login request to backend
         const response = await fetch(
-            "http://localhost:5000/api/login",
+            "/api/login",
             {
                 method: "POST",
 
