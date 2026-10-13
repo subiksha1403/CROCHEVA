@@ -14,6 +14,34 @@ app.use(express.json());
 // Serve frontend files
 app.use(express.static(__dirname));
 
+// Serve images even when HTML uses nested image paths
+const path = require("path");
+const fs = require("fs");
+
+app.use("/images", (req, res, next) => {
+    const fileName = path.basename(req.path);
+
+    const folders = [
+        __dirname,
+        path.join(__dirname, "images"),
+        path.join(__dirname, "images", "keychain"),
+        path.join(__dirname, "images", "phonecharm"),
+        path.join(__dirname, "images", "flowers"),
+        path.join(__dirname, "images", "hairaccessories"),
+        path.join(__dirname, "images", "toys")
+    ];
+
+    for (const folder of folders) {
+        const filePath = path.join(folder, fileName);
+
+        if (fs.existsSync(filePath)) {
+            return res.sendFile(filePath);
+        }
+    }
+
+    next();
+});
+
 // Home page
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/index.html");
