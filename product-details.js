@@ -100,7 +100,7 @@ async function loadProduct() {
     try {
 
         const response =
-            await fetch("http://localhost:5000/api/products");
+            await fetch("/api/products");
 
 
         const data =
